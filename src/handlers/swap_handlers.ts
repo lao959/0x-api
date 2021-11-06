@@ -318,6 +318,7 @@ export class SwapHandlers {
                     },
                 ]);
             }
+            console.log(e.stack);
             req.log.info('Uncaught error', e.message, e.stack);
             throw new InternalServerError(e.message);
         }
